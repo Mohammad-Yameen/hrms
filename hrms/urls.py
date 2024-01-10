@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import HomeView, EmployeeView, EmployeeFormView
+from .views import index, create_employee, get_employee
 
 urlpatterns = [
-    path("", HomeView.as_view(), name='home'),
-    path("employeeform", EmployeeFormView.as_view(), name='employeeform'),
-    path("employee", EmployeeView.as_view(), name='employee')
+    path("", index),
+    path("create_employee", create_employee),
+    path("get_employee", create_employee)
 ]
